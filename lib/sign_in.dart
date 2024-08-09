@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_project/sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -66,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                           BorderSide(color: Color.fromRGBO(168, 166, 167, 1)),
                     ),
                     suffixIcon: Icon(
-                      Icons.visibility,
+                      Icons.visibility_off,
                       color: Color.fromRGBO(166, 167, 168, 1),
                     )),
               ),
@@ -108,7 +109,12 @@ class _LoginPageState extends State<LoginPage> {
                   TextButton(
                     child: const Text("Sign Up",
                         style: TextStyle(color: Colors.red)),
-                    onPressed: () {},
+                    onPressed: () {
+                       Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignUpPage()));
+                    },
                   )
                 ],
               ),
